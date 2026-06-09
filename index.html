@@ -1555,8 +1555,8 @@ img, svg, video { display: block; max-width: 100%; }
       var tilt = Math.cos(f.tiltX); /* simulate 3D tilt: foreshorten one axis */
 
       /* opacity by depth */
-      var alpha = scale * 0.85;
-      alpha = Math.max(0.08, Math.min(0.75, alpha));
+      var alpha = scale * 0.3;
+      alpha = Math.max(0.03, Math.min(0.18, alpha));
 
       ctx.save();
       ctx.translate(projX, projY);
