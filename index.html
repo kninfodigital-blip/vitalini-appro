@@ -975,6 +975,13 @@ img, svg, video { display: block; max-width: 100%; }
     .span6, .span4, .span8 { grid-column: span 12; }
     .snum { font-size: 120px; }
   }
+
+  /* language switcher */
+  .lang-switch { display: flex; align-items: center; gap: 6px; }
+  .lang-sep { font-family: var(--font-mono); font-size: 10px; color: var(--faint); }
+  .lang-btn { background: none; border: 1px solid transparent; padding: 4px 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; color: var(--faint); text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
+  .lang-btn:hover { color: var(--wh); }
+  .lang-btn.active { color: var(--cy); border-color: var(--cy); }
 </style>
 </head>
 <body>
@@ -995,8 +1002,12 @@ img, svg, video { display: block; max-width: 100%; }
 
 <header class="top">
   <div class="wrap">
-    <div class="brand"><b>APPRO</b><span>Mountain</span></div>
-    <span class="crumb">Distribuidor oficial Vitalini · ES / AD / AR</span>
+    <div class="brand"><img src="assets/logo-appro.jpg" alt="Appro Mountain" style="height:44px;width:auto;"></div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="ca">CA</button>
+    </div>
   </div>
 </header>
 
@@ -1007,20 +1018,20 @@ img, svg, video { display: block; max-width: 100%; }
       <div>
         <div class="hero-eyebrow rv">
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M6 0.5V11.5 M1.24 3.25L10.76 8.75 M1.24 8.75L10.76 3.25" stroke="#2CB5CC" stroke-width="1"></path></svg>
-          <span>Vitalini Performance Ski Wear · Made in Italy</span>
+          <span data-i18n="hero-eyebrow">Vitalini Performance Ski Wear · Made in Italy</span>
         </div>
         <h1 class="disp rv" style="transition-delay:0.08s">
           <span class="l2">Vita</span>
           <span class="l2 outline">Lini</span>
         </h1>
-        <p class="hero-sub rv" style="transition-delay:0.16s">
+        <p class="hero-sub rv" style="transition-delay:0.16s" data-i18n-html="hero-sub">
           <strong>Diseñado con pasión. Fabricado para ganar.</strong><br>
           Equipamiento técnico 100% personalizado para clubs, escuelas y federaciones de esquí.
           Distribución oficial en España, Andorra y Argentina. Temporada 2026–2027.
         </p>
         <div class="hero-ctas rv" style="transition-delay:0.24s">
-          <a class="btn" href="#contacto">Solicita tu propuesta <span aria-hidden="true">→</span></a>
-          <a class="link-q" href="#coleccion">Ver el catálogo 26–27</a>
+          <a class="btn" href="#contacto" data-i18n-html="hero-cta">Solicita tu propuesta <span aria-hidden="true">→</span></a>
+          <a class="link-q" href="https://online.fliphtml5.com/rvvjy/aira/#p=1" target="_blank" rel="noopener" data-i18n="hero-catalog">Ver el catálogo 26–27</a>
         </div>
       </div>
       <div class="hero-photo rv" style="transition-delay:0.2s">
@@ -1032,7 +1043,7 @@ img, svg, video { display: block; max-width: 100%; }
   </div>
   <div class="marquee" aria-hidden="true">
     <div class="track" id="mq-track">
-      <span>DERMIZAX® 20K / 20K</span><i>❖</i><span>PRIMALOFT® INSULATION</span><i>❖</i><span>CORDURA® REINFORCED</span><i>❖</i><span>OEKO-TEX® STANDARD 100</span><i>❖</i><span>FIS HOMOLOGATED</span><i>❖</i><span>+20 AÑOS EN COPA DEL MUNDO</span><i>❖</i><span>100% MADE IN ITALY</span><i>❖</i>
+      <span>DERMIZAX® 20K / 20K</span><i>❖</i><span>PRIMALOFT® INSULATION</span><i>❖</i><span>CORDURA® REINFORCED</span><i>❖</i><span>OEKO-TEX® STANDARD 100</span><i>❖</i><span>FIS HOMOLOGATED</span><i>❖</i><span data-i18n="marquee-copa">+20 AÑOS EN COPA DEL MUNDO</span><i>❖</i><span>100% MADE IN ITALY</span><i>❖</i>
     </div>
   </div>
 </section>
@@ -1041,9 +1052,9 @@ img, svg, video { display: block; max-width: 100%; }
 <section class="s" id="historia" data-screen-label="02 Vídeo">
   <span class="snum" aria-hidden="true">02</span>
   <div class="wrap">
-    <div class="kicker rv"><span class="n">02</span><span class="rule rv-line"></span><span class="t">La historia</span></div>
-    <h2 class="title disp rv" style="transition-delay:0.08s"><span data-count="20">20</span> años vistiendo<br>a los que <span class="outline-cy">ganan.</span></h2>
-    <p class="sub rv" style="transition-delay:0.14s">
+    <div class="kicker rv"><span class="n">02</span><span class="rule rv-line"></span><span class="t" data-i18n="s02-kicker">La historia</span></div>
+    <h2 class="title disp rv" style="transition-delay:0.08s" data-i18n-html="s02-title"><span data-count="20">20</span> años vistiendo<br>a los que <span class="outline-cy">ganan.</span></h2>
+    <p class="sub rv" style="transition-delay:0.14s" data-i18n="s02-sub">
       Pietro Vitalini, ex-atleta del equipo nacional italiano, fundó la marca con una obsesión:
       que cada prenda esté a la altura del esfuerzo del esquiador. Esta es nuestra historia.
     </p>
@@ -1053,7 +1064,7 @@ img, svg, video { display: block; max-width: 100%; }
         <div class="veil"></div>
         <div class="play"></div>
       </div>
-      <div class="meta"><span>VÍDEO INSTITUCIONAL · STORIA VITALINI</span><span>00:00 — 01:30 · SUB ES</span></div>
+      <div class="meta"><span>VÍDEO INSTITUCIONAL · STORIA VITALINI</span><span data-i18n="video-sub">00:00 — 01:30 · SUB ES</span></div>
     </div>
   </div>
 </section>
@@ -1063,9 +1074,9 @@ img, svg, video { display: block; max-width: 100%; }
 <section class="s light" id="coleccion" data-screen-label="03 Prendas">
   <span class="snum" aria-hidden="true">03</span>
   <div class="wrap">
-    <div class="kicker rv"><span class="n">03</span><span class="rule rv-line"></span><span class="t">Colección 2026–2027</span></div>
-    <h2 class="title disp rv" style="transition-delay:0.08s">Cada prenda, con los<br>colores de <span style="color:var(--cy)">tu club.</span></h2>
-    <p class="sub rv" style="transition-delay:0.14s">
+    <div class="kicker rv"><span class="n">03</span><span class="rule rv-line"></span><span class="t" data-i18n="s03-kicker">Colección 2026–2027</span></div>
+    <h2 class="title disp rv" style="transition-delay:0.08s" data-i18n-html="s03-title">Cada prenda, con los<br>colores de <span style="color:var(--cy)">tu club.</span></h2>
+    <p class="sub rv" style="transition-delay:0.14s" data-i18n-html="s03-sub">
       Sin mínimos de pedido. Hasta <strong style="color:#0A0A0A;font-weight:600"><span data-count="5">5</span> modificaciones</strong> de diseño incluidas.
       Producción italiana, certificación FIS.
     </p>
@@ -1073,7 +1084,7 @@ img, svg, video { display: block; max-width: 100%; }
     <div class="pgrid">
       <a class="pitem span8 rv" href="#contacto" data-cat="jackets">
         <div class="ph"><span class="idx">01</span><image-slot id="prod-jackets" class="h-tall" style="height:460px" placeholder="Jackets técnicas — foto oficial" shape="rect"></image-slot></div>
-        <div class="cap"><span class="nm">Jackets técnicas</span><span class="tech">DERMIZAX® 20K</span><span class="arrow">→</span></div>
+        <div class="cap"><span class="nm" data-i18n="prod-jackets">Jackets técnicas</span><span class="tech">DERMIZAX® 20K</span><span class="arrow">→</span></div>
       </a>
       <a class="pitem span4 rv" style="transition-delay:0.08s" href="#contacto" data-cat="race-suits">
         <div class="ph"><span class="idx">02</span><image-slot id="prod-race" class="h-tall" style="height:460px" placeholder="Race suits FIS" shape="rect"></image-slot></div>
@@ -1081,7 +1092,7 @@ img, svg, video { display: block; max-width: 100%; }
       </a>
       <a class="pitem span4 rv" href="#contacto" data-cat="pants">
         <div class="ph"><span class="idx">03</span><image-slot id="prod-pants" style="height:330px" placeholder="Pantalones técnicos" shape="rect"></image-slot></div>
-        <div class="cap"><span class="nm">Pantalones</span><span class="tech">CORDURA®</span><span class="arrow">→</span></div>
+        <div class="cap"><span class="nm" data-i18n="prod-pants">Pantalones</span><span class="tech">CORDURA®</span><span class="arrow">→</span></div>
       </a>
       <a class="pitem span4 rv" style="transition-delay:0.08s" href="#contacto" data-cat="softshell">
         <div class="ph"><span class="idx">04</span><image-slot id="prod-soft" style="height:330px" placeholder="Softshell &amp; insulators" shape="rect"></image-slot></div>
@@ -1093,23 +1104,23 @@ img, svg, video { display: block; max-width: 100%; }
       </a>
       <a class="pitem span8 rv" href="#contacto" data-cat="accesorios">
         <div class="ph"><span class="idx">06</span><image-slot id="prod-acc" style="height:330px" placeholder="Accesorios &amp; casual con branding de club" shape="rect"></image-slot></div>
-        <div class="cap"><span class="nm">Accesorios &amp; Casual</span><span class="tech">CUSTOM BRANDING</span><span class="arrow">→</span></div>
+        <div class="cap"><span class="nm" data-i18n="prod-acc">Accesorios &amp; Casual</span><span class="tech">CUSTOM BRANDING</span><span class="arrow">→</span></div>
       </a>
       <div class="span4 rv" style="transition-delay:0.08s; display:flex; flex-direction:column; justify-content:flex-end; gap:18px; padding-bottom:14px;">
-        <p style="margin:0; font-size:14px; line-height:1.8; color:rgba(10,10,10,0.55); font-weight:300;">
+        <p style="margin:0; font-size:14px; line-height:1.8; color:rgba(10,10,10,0.55); font-weight:300;" data-i18n="prod-desc">
           Personalización total con sublimación full-color.
           Diseño gráfico incluido, postventa, reparaciones y logística.
         </p>
-        <a class="link-q" href="#contacto" style="color:#0A0A0A; align-self:flex-start;">Pide el catálogo completo</a>
+        <a class="link-q" href="https://online.fliphtml5.com/rvvjy/aira/#p=1" target="_blank" rel="noopener" style="color:#0A0A0A; align-self:flex-start;" data-i18n="prod-catalog-link">Pide el catálogo completo</a>
       </div>
     </div>
   </div>
 
   <div class="promo rv">
     <div class="wrap">
-      <div class="lbl"><b>VENTANA DE PEDIDOS</b><br>Reserva tu producción y asegura el descuento de temporada.</div>
-      <div class="big">ABRIL <span class="pct"><span data-count="-14">-14</span>%</span><span class="when">Entrega octubre 2026</span></div>
-      <div class="big b2">JUNIO <span class="pct"><span data-count="-6">-6</span>%</span><span class="when">Entrega noviembre 2026</span></div>
+      <div class="lbl" data-i18n-html="promo-lbl"><b>VENTANA DE PEDIDOS</b><br>Reserva tu producción y asegura el descuento de temporada.</div>
+      <div class="big">ABRIL <span class="pct"><span data-count="-14">-14</span>%</span><span class="when" data-i18n="promo-when1">Entrega octubre 2026</span></div>
+      <div class="big b2">JUNIO <span class="pct"><span data-count="-6">-6</span>%</span><span class="when" data-i18n="promo-when2">Entrega noviembre 2026</span></div>
     </div>
   </div>
 </section>
@@ -1121,15 +1132,15 @@ img, svg, video { display: block; max-width: 100%; }
   <div class="wrap">
     <div class="contact-grid">
       <div class="c-left">
-        <div class="kicker rv"><span class="n">04</span><span class="rule rv-line"></span><span class="t">Hablemos</span></div>
-        <h2 class="title disp rv" style="transition-delay:0.08s">Cuéntame<br><span class="outline">tu proyecto.</span></h2>
-        <p class="sub rv" style="transition-delay:0.14s">Te respondo en menos de 24h con una propuesta personalizada para tu club, escuela o federación.</p>
+        <div class="kicker rv"><span class="n">04</span><span class="rule rv-line"></span><span class="t" data-i18n="s04-kicker">Hablemos</span></div>
+        <h2 class="title disp rv" style="transition-delay:0.08s" data-i18n-html="s04-title">Cuéntame<br><span class="outline">tu proyecto.</span></h2>
+        <p class="sub rv" style="transition-delay:0.14s" data-i18n="s04-sub">Te respondo en menos de 24h con una propuesta personalizada para tu club, escuela o federación.</p>
         <div class="gerard rv" style="transition-delay:0.18s">
           <image-slot id="gerard-photo" shape="circle" placeholder="Foto Gerard"></image-slot>
           <div>
             <div class="nm">Gerard Udina</div>
-            <div class="rl">Agente comercial · España / Andorra / Argentina</div>
-            <a class="ws" href="https://wa.me/376000000?text=Hola%20Gerard%2C%20vengo%20de%20la%20web%20Vitalini%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%E2%80%A6" target="_blank" rel="noopener">WhatsApp Business directo ↗</a>
+            <div class="rl" data-i18n="gerard-role">Agente comercial · España / Andorra / Argentina</div>
+            <a class="ws" href="https://wa.me/376000000?text=Hola%20Gerard%2C%20vengo%20de%20la%20web%20Vitalini%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%E2%80%A6" target="_blank" rel="noopener" data-i18n="gerard-wa">WhatsApp Business directo ↗</a>
           </div>
         </div>
         <div class="gdata rv" style="transition-delay:0.22s">
@@ -1142,45 +1153,45 @@ img, svg, video { display: block; max-width: 100%; }
       <div>
         <form id="lead-form" novalidate="">
           <div class="row">
-            <div class="field"><label for="f-nombre">Nombre completo *</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required=""></div>
+            <div class="field"><label for="f-nombre" data-i18n="lbl-nombre">Nombre completo *</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required=""></div>
             <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" required=""></div>
-            <div class="field"><label for="f-tel">Teléfono *</label><input id="f-tel" name="telefono" type="tel" placeholder="+34 / +376 / +54" required=""></div>
-            <div class="field"><label for="f-org">Organización *</label><input id="f-org" name="organizacion" type="text" required=""></div>
+            <div class="field"><label for="f-tel" data-i18n="lbl-tel">Teléfono *</label><input id="f-tel" name="telefono" type="tel" placeholder="+34 / +376 / +54" required=""></div>
+            <div class="field"><label for="f-org" data-i18n="lbl-org">Organización *</label><input id="f-org" name="organizacion" type="text" required=""></div>
             <div class="field">
-              <label for="f-tipo">Tipo de organización *</label>
+              <label for="f-tipo" data-i18n="lbl-tipo">Tipo de organización *</label>
               <select id="f-tipo" name="tipo" required="">
-                <option value="" disabled="" selected="">Seleccionar…</option>
-                <option>Club</option><option>Escuela</option><option>Federación</option><option>Equipo profesional</option><option>Otro</option>
+                <option value="" disabled="" selected="" data-i18n="opt-select">Seleccionar…</option>
+                <option data-i18n="opt-club">Club</option><option data-i18n="opt-escuela">Escuela</option><option data-i18n="opt-federacion">Federación</option><option data-i18n="opt-equipo">Equipo profesional</option><option data-i18n="opt-otro">Otro</option>
               </select>
             </div>
             <div class="field">
-              <label for="f-pais">País *</label>
+              <label for="f-pais" data-i18n="lbl-pais">País *</label>
               <select id="f-pais" name="pais" required="">
-                <option value="" disabled="" selected="">Seleccionar…</option>
-                <option>España</option><option>Andorra</option><option>Argentina</option><option>Otro</option>
+                <option value="" disabled="" selected="" data-i18n="opt-select2">Seleccionar…</option>
+                <option data-i18n="opt-espanya">España</option><option>Andorra</option><option>Argentina</option><option data-i18n="opt-otro2">Otro</option>
               </select>
             </div>
           </div>
           <div class="field">
-            <label for="f-cat">Categoría de interés</label>
+            <label for="f-cat" data-i18n="lbl-cat">Categoría de interés</label>
             <select id="f-cat" name="categoria">
-              <option value="" disabled="" selected="">Seleccionar…</option>
-              <option value="jackets">Jackets técnicas</option><option value="pants">Pantalones técnicos</option>
+              <option value="" disabled="" selected="" data-i18n="opt-select3">Seleccionar…</option>
+              <option value="jackets" data-i18n="opt-jackets">Jackets técnicas</option><option value="pants" data-i18n="opt-pants">Pantalones técnicos</option>
               <option value="race-suits">Race Suits</option><option value="softshell">Softshell &amp; Insulators</option>
-              <option value="baselayer">Ropa interior técnica</option><option value="accesorios">Accesorios &amp; Casual</option>
-              <option value="todo">Todo el catálogo</option>
+              <option value="baselayer" data-i18n="opt-baselayer">Ropa interior técnica</option><option value="accesorios" data-i18n="opt-accesorios">Accesorios &amp; Casual</option>
+              <option value="todo" data-i18n="opt-todo">Todo el catálogo</option>
             </select>
           </div>
-          <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu proyecto…"></textarea></div>
-          <label class="rgpd"><input type="checkbox" id="f-rgpd" required=""><span>Acepto la <a href="#">política de privacidad</a>. Tus datos son tratados por Appro Mountain y compartidos con Vitalini S.r.l. únicamente para responder a tu solicitud. Nunca cedidos a terceros.</span></label>
+          <div class="field"><label for="f-msg" data-i18n="lbl-msg">Mensaje</label><textarea id="f-msg" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu proyecto…" data-i18n-placeholder="ph-msg"></textarea></div>
+          <label class="rgpd"><input type="checkbox" id="f-rgpd" required=""><span data-i18n-html="rgpd-text">Acepto la <a href="#">política de privacidad</a>. Tus datos son tratados por Appro Mountain y compartidos con Vitalini S.r.l. únicamente para responder a tu solicitud. Nunca cedidos a terceros.</span></label>
           <p class="legal">RGPD (España) · Llei 29/2021 (Andorra) · Ley 25.326 (Argentina)</p>
-          <div class="form-foot"><button class="btn" type="submit" id="submit-btn">Enviar propuesta <span aria-hidden="true">→</span></button></div>
+          <div class="form-foot"><button class="btn" type="submit" id="submit-btn" data-i18n-html="btn-submit">Enviar propuesta <span aria-hidden="true">→</span></button></div>
         </form>
         <div class="success" id="form-success">
           <div class="ck"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 12.5L10 17.5L19 7" stroke="white" stroke-width="2.5" stroke-linecap="square"></path></svg></div>
-          <h3>Recibido.</h3>
-          <p>Te respondemos en menos de 24h con tu propuesta personalizada. Mientras tanto, descarga el catálogo 2026–2027.</p>
-          <p style="margin-top:28px;"><a class="link-q" href="#">Descargar catálogo PDF</a></p>
+          <h3 data-i18n="success-title">Recibido.</h3>
+          <p data-i18n="success-msg">Te respondemos en menos de 24h con tu propuesta personalizada. Mientras tanto, descarga el catálogo 2026–2027.</p>
+          <p style="margin-top:28px;"><a class="link-q" href="https://online.fliphtml5.com/rvvjy/aira/#p=1" target="_blank" rel="noopener" data-i18n="success-pdf">Descargar catálogo PDF</a></p>
         </div>
       </div>
     </div>
@@ -1189,14 +1200,14 @@ img, svg, video { display: block; max-width: 100%; }
 
 <footer>
   <div class="wrap">
-    <div class="brand"><b>APPRO</b><span>Mountain</span></div>
+    <div class="brand"><img src="assets/logo-appro.jpg" alt="Appro Mountain" style="height:36px;width:auto;"></div>
     <nav class="cols" aria-label="Legal">
-      <a href="#">Política de privacidad</a><a href="#">Aviso legal</a><a href="#">Cookies</a>
+      <a href="#" data-i18n="footer-privacy">Política de privacidad</a><a href="#" data-i18n="footer-legal">Aviso legal</a><a href="#">Cookies</a>
     </nav>
     <nav class="cols" aria-label="Redes">
       <a href="#" style="color:var(--cy)">Instagram</a><a href="#" style="color:var(--cy)">LinkedIn</a><a href="#" style="color:var(--cy)">YouTube</a>
     </nav>
-    <div class="legalline">© 2026 Appro Mountain · Vitalini Performance Ski Wear es marca registrada de Vitalini S.r.l. · Made in Italy</div>
+    <div class="legalline" data-i18n="footer-legal-line">© 2026 Appro Mountain · Vitalini Performance Ski Wear es marca registrada de Vitalini S.r.l. · Made in Italy</div>
   </div>
 </footer>
 
@@ -1285,6 +1296,140 @@ img, svg, video { display: block; max-width: 100%; }
   frame.addEventListener("click", playVideo);
   frame.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); playVideo(); } });
 
+  /* ── i18n language switcher ── */
+  var i18n = {
+    es: {
+      "hero-eyebrow": "Vitalini Performance Ski Wear · Made in Italy",
+      "hero-sub": '<strong>Diseñado con pasión. Fabricado para ganar.</strong><br>Equipamiento técnico 100% personalizado para clubs, escuelas y federaciones de esquí. Distribución oficial en España, Andorra y Argentina. Temporada 2026–2027.',
+      "hero-cta": 'Solicita tu propuesta <span aria-hidden="true">→</span>',
+      "hero-catalog": "Ver el catálogo 26–27",
+      "marquee-copa": "+20 AÑOS EN COPA DEL MUNDO",
+      "s02-kicker": "La historia",
+      "s02-title": '<span data-count="20">20</span> años vistiendo<br>a los que <span class="outline-cy">ganan.</span>',
+      "s02-sub": "Pietro Vitalini, ex-atleta del equipo nacional italiano, fundó la marca con una obsesión: que cada prenda esté a la altura del esfuerzo del esquiador. Esta es nuestra historia.",
+      "video-sub": "00:00 — 01:30 · SUB ES",
+      "s03-kicker": "Colección 2026–2027",
+      "s03-title": 'Cada prenda, con los<br>colores de <span style="color:var(--cy)">tu club.</span>',
+      "s03-sub": 'Sin mínimos de pedido. Hasta <strong style="color:#0A0A0A;font-weight:600"><span data-count="5">5</span> modificaciones</strong> de diseño incluidas. Producción italiana, certificación FIS.',
+      "prod-jackets": "Jackets técnicas",
+      "prod-pants": "Pantalones",
+      "prod-acc": "Accesorios & Casual",
+      "prod-desc": "Personalización total con sublimación full-color. Diseño gráfico incluido, postventa, reparaciones y logística.",
+      "prod-catalog-link": "Pide el catálogo completo",
+      "promo-lbl": '<b>VENTANA DE PEDIDOS</b><br>Reserva tu producción y asegura el descuento de temporada.',
+      "promo-when1": "Entrega octubre 2026",
+      "promo-when2": "Entrega noviembre 2026",
+      "s04-kicker": "Hablemos",
+      "s04-title": 'Cuéntame<br><span class="outline">tu proyecto.</span>',
+      "s04-sub": "Te respondo en menos de 24h con una propuesta personalizada para tu club, escuela o federación.",
+      "gerard-role": "Agente comercial · España / Andorra / Argentina",
+      "gerard-wa": "WhatsApp Business directo ↗",
+      "lbl-nombre": "Nombre completo *",
+      "lbl-tel": "Teléfono *",
+      "lbl-org": "Organización *",
+      "lbl-tipo": "Tipo de organización *",
+      "opt-select": "Seleccionar…", "opt-select2": "Seleccionar…", "opt-select3": "Seleccionar…",
+      "opt-club": "Club", "opt-escuela": "Escuela", "opt-federacion": "Federación", "opt-equipo": "Equipo profesional", "opt-otro": "Otro", "opt-otro2": "Otro",
+      "lbl-pais": "País *",
+      "opt-espanya": "España",
+      "lbl-cat": "Categoría de interés",
+      "opt-jackets": "Jackets técnicas", "opt-pants": "Pantalones técnicos", "opt-baselayer": "Ropa interior técnica", "opt-accesorios": "Accesorios & Casual", "opt-todo": "Todo el catálogo",
+      "lbl-msg": "Mensaje",
+      "ph-msg": "Cuéntanos sobre tu proyecto…",
+      "rgpd-text": 'Acepto la <a href="#">política de privacidad</a>. Tus datos son tratados por Appro Mountain y compartidos con Vitalini S.r.l. únicamente para responder a tu solicitud. Nunca cedidos a terceros.',
+      "btn-submit": 'Enviar propuesta <span aria-hidden="true">→</span>',
+      "success-title": "Recibido.",
+      "success-msg": "Te respondemos en menos de 24h con tu propuesta personalizada. Mientras tanto, descarga el catálogo 2026–2027.",
+      "success-pdf": "Descargar catálogo PDF",
+      "footer-privacy": "Política de privacidad",
+      "footer-legal": "Aviso legal",
+      "footer-legal-line": "© 2026 Appro Mountain · Vitalini Performance Ski Wear es marca registrada de Vitalini S.r.l. · Made in Italy"
+    },
+    ca: {
+      "hero-eyebrow": "Vitalini Performance Ski Wear · Made in Italy",
+      "hero-sub": '<strong>Dissenyat amb passió. Fabricat per guanyar.</strong><br>Equipament tècnic 100% personalitzat per a clubs, escoles i federacions d\'esquí. Distribució oficial a Espanya, Andorra i Argentina. Temporada 2026–2027.',
+      "hero-cta": 'Sol·licita la teva proposta <span aria-hidden="true">→</span>',
+      "hero-catalog": "Veure el catàleg 26–27",
+      "marquee-copa": "+20 ANYS A LA COPA DEL MÓN",
+      "s02-kicker": "La història",
+      "s02-title": '<span data-count="20">20</span> anys vestint<br>els que <span class="outline-cy">guanyen.</span>',
+      "s02-sub": "Pietro Vitalini, ex-atleta de l'equip nacional italià, va fundar la marca amb una obsessió: que cada peça estigui a l'alçada de l'esforç de l'esquiador. Aquesta és la nostra història.",
+      "video-sub": "00:00 — 01:30 · SUB CA",
+      "s03-kicker": "Col·lecció 2026–2027",
+      "s03-title": 'Cada peça, amb els<br>colors del <span style="color:var(--cy)">teu club.</span>',
+      "s03-sub": 'Sense mínims de comanda. Fins a <strong style="color:#0A0A0A;font-weight:600"><span data-count="5">5</span> modificacions</strong> de disseny incloses. Producció italiana, certificació FIS.',
+      "prod-jackets": "Jaquetes tècniques",
+      "prod-pants": "Pantalons",
+      "prod-acc": "Accessoris & Casual",
+      "prod-desc": "Personalització total amb sublimació full-color. Disseny gràfic inclòs, postvenda, reparacions i logística.",
+      "prod-catalog-link": "Demana el catàleg complet",
+      "promo-lbl": '<b>FINESTRA DE COMANDES</b><br>Reserva la teva producció i assegura el descompte de temporada.',
+      "promo-when1": "Lliurament octubre 2026",
+      "promo-when2": "Lliurament novembre 2026",
+      "s04-kicker": "Parlem",
+      "s04-title": 'Explica\'m<br><span class="outline">el teu projecte.</span>',
+      "s04-sub": "Et responc en menys de 24h amb una proposta personalitzada per al teu club, escola o federació.",
+      "gerard-role": "Agent comercial · Espanya / Andorra / Argentina",
+      "gerard-wa": "WhatsApp Business directe ↗",
+      "lbl-nombre": "Nom complet *",
+      "lbl-tel": "Telèfon *",
+      "lbl-org": "Organització *",
+      "lbl-tipo": "Tipus d\'organització *",
+      "opt-select": "Seleccionar…", "opt-select2": "Seleccionar…", "opt-select3": "Seleccionar…",
+      "opt-club": "Club", "opt-escuela": "Escola", "opt-federacion": "Federació", "opt-equipo": "Equip professional", "opt-otro": "Altre", "opt-otro2": "Altre",
+      "lbl-pais": "País *",
+      "opt-espanya": "Espanya",
+      "lbl-cat": "Categoria d\'interès",
+      "opt-jackets": "Jaquetes tècniques", "opt-pants": "Pantalons tècnics", "opt-baselayer": "Roba interior tècnica", "opt-accesorios": "Accessoris & Casual", "opt-todo": "Tot el catàleg",
+      "lbl-msg": "Missatge",
+      "ph-msg": "Explica'ns el teu projecte…",
+      "rgpd-text": 'Accepto la <a href="#">política de privacitat</a>. Les teves dades són tractades per Appro Mountain i compartides amb Vitalini S.r.l. únicament per respondre a la teva sol·licitud. Mai cedides a tercers.',
+      "btn-submit": 'Enviar proposta <span aria-hidden="true">→</span>',
+      "success-title": "Rebut.",
+      "success-msg": "Et responem en menys de 24h amb la teva proposta personalitzada. Mentrestant, descarrega el catàleg 2026–2027.",
+      "success-pdf": "Descarregar catàleg PDF",
+      "footer-privacy": "Política de privacitat",
+      "footer-legal": "Avís legal",
+      "footer-legal-line": "© 2026 Appro Mountain · Vitalini Performance Ski Wear és marca registrada de Vitalini S.r.l. · Made in Italy"
+    }
+  };
+
+  var currentLang = localStorage.getItem("lang") || "es";
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang-btn").forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+    });
+    var strings = i18n[lang];
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (strings[key] != null) el.textContent = strings[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      if (strings[key] != null) el.innerHTML = strings[key];
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-placeholder");
+      if (strings[key] != null) el.placeholder = strings[key];
+    });
+    /* re-duplicate marquee after content change */
+    var mqTrack = document.getElementById("mq-track");
+    var items = mqTrack.querySelectorAll(":scope > *");
+    var half = items.length / 2;
+    for (var i = items.length - 1; i >= half; i--) items[i].remove();
+    mqTrack.innerHTML += mqTrack.innerHTML;
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
+  });
+
+  if (currentLang !== "es") setLang(currentLang);
+
   /* product click → pre-fill category */
   document.querySelectorAll(".pitem[data-cat]").forEach(function (p) {
     p.addEventListener("click", function () {
@@ -1307,7 +1452,7 @@ img, svg, video { display: block; max-width: 100%; }
       if (bad) {
         ok = false; f.classList.add("err");
         var m = document.createElement("span"); m.className = "msg";
-        m.textContent = inp.type === "email" && inp.value ? "EMAIL NO VÁLIDO" : "OBLIGATORIO";
+        m.textContent = inp.type === "email" && inp.value ? (currentLang === "ca" ? "EMAIL NO VÀLID" : "EMAIL NO VÁLIDO") : (currentLang === "ca" ? "OBLIGATORI" : "OBLIGATORIO");
         f.appendChild(m);
       }
     });
@@ -1315,7 +1460,7 @@ img, svg, video { display: block; max-width: 100%; }
     if (!rg.checked) { ok = false; rg.style.borderColor = "#D32F2F"; } else { rg.style.borderColor = ""; }
     if (!ok) return;
     var btn = document.getElementById("submit-btn");
-    btn.disabled = true; btn.firstChild.textContent = "Enviando… ";
+    btn.disabled = true; btn.firstChild.textContent = currentLang === "ca" ? "Enviant… " : "Enviando… ";
     setTimeout(function () {
       form.style.display = "none";
       document.getElementById("form-success").style.display = "block";
