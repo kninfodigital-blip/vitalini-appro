@@ -986,7 +986,7 @@ img, svg, video { display: block; max-width: 100%; }
   .lang-btn:hover { color: var(--wh); }
   .lang-btn.active { color: var(--cy); border-color: var(--cy); }
   /* snowfall */
-  #snowfall { position: fixed; inset: 0; z-index: 9999; pointer-events: none; }
+  #snowfall { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 </style>
 </head>
 <body>
@@ -1464,7 +1464,7 @@ img, svg, video { display: block; max-width: 100%; }
 
   var canvas = document.getElementById("snowfall");
   var ctx = canvas.getContext("2d");
-  var W, H, flakes = [], MAX = 120;
+  var W, H, flakes = [], MAX = 40;
   var PERSPECTIVE = 800;
 
   function resize() {
