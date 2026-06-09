@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitalini Performance Ski Wear · Distribuidor oficial España / Andorra / Argentina · Appro Mountain</title>
+<style>/* Vitalini × Appro Mountain — Design system entry point.
+ * Consumers link THIS file. Order matters: fonts → tokens → base. */
+
+/* Webfonts — loaded from Google Fonts CDN.
+ * Inter covers display + body (variable axis); JetBrains Mono powers tech labels.
+ * NOTE: If self-hosting later, swap @import for @font-face rules pointing at
+ *       /assets/fonts/<file>.woff2.
+ */
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-1.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-3.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-4.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-5.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-1.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-3.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-4.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-5.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-1.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-3.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-4.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-5.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-1.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-3.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-4.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-5.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-1.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-3.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-4.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-5.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-9.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-10.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-11.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-9.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-10.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-11.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-9.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-10.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-11.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* Vitalini × Appro Mountain — Color tokens
+ * Deliberately reduced palette. Cyan on black is the brand's premium signal.
+ */
+
+:root {
+  /* ── Base palette (from brief §3.1) ──────────────────────────────── */
+  --color-black:       #0A0A0A;  /* Hero & form section background  */
+  --color-white:       #FFFFFF;  /* Type on black; product section bg */
+  --color-cyan:        #2CB5CC;  /* Vitalini Cyan — signature accent  */
+  --color-cyan-deep:   #1F8FA3;  /* Hover / pressed cyan              */
+  --color-cyan-soft:   #7FD4E1;  /* Secondary cyan (small badges)     */
+  --color-ice:         #EEF7F9;  /* Soft section fill / card hover    */
+  --color-steel:       #595959;  /* Subtitles, microcopy, legal       */
+  --color-steel-soft:  #B3B3B3;  /* Disabled text, dividers on light  */
+  --color-race-red:    #D32F2F;  /* Urgency / promo badge ONLY        */
+
+  /* Neutral steps (use sparingly — palette is meant to be tight) */
+  --color-ink-90:      #1A1A1A;
+  --color-ink-80:      #262626;
+  --color-ink-60:      #404040;
+  --color-ink-40:      #737373;
+  --color-ink-20:      #D4D4D4;
+  --color-ink-10:      #F2F2F2;
+
+  /* Alpha tokens — used over photography / on dark hero */
+  --alpha-white-90:    rgba(255,255,255,0.90);
+  --alpha-white-70:    rgba(255,255,255,0.70);
+  --alpha-white-60:    rgba(255,255,255,0.60);
+  --alpha-white-40:    rgba(255,255,255,0.40);
+  --alpha-white-20:    rgba(255,255,255,0.20);
+  --alpha-white-10:    rgba(255,255,255,0.10);
+  --alpha-black-80:    rgba(10,10,10,0.80);
+  --alpha-black-60:    rgba(10,10,10,0.60);
+  --alpha-black-40:    rgba(10,10,10,0.40);
+  --alpha-cyan-15:     rgba(44,181,204,0.15);
+  --alpha-cyan-30:     rgba(44,181,204,0.30);
+
+  /* ── Semantic aliases ────────────────────────────────────────────── */
+  /* Surfaces */
+  --surface-page:           var(--color-white);
+  --surface-dark:           var(--color-black);   /* hero, form section */
+  --surface-soft:           var(--color-ice);     /* prendas section    */
+  --surface-card:           var(--color-white);
+  --surface-card-dark:      var(--color-ink-90);
+
+  /* Text */
+  --text-primary:           var(--color-black);
+  --text-primary-invert:    var(--color-white);
+  --text-secondary:         var(--color-steel);
+  --text-muted:             var(--alpha-white-60); /* on dark only */
+  --text-accent:            var(--color-cyan);
+  --text-link:              var(--color-cyan);
+
+  /* Borders / dividers */
+  --border-hairline:        var(--color-ink-20);
+  --border-on-dark:         var(--alpha-white-20);
+  --border-accent:          var(--color-cyan);
+
+  /* Interactive */
+  --action-primary-bg:      var(--color-cyan);
+  --action-primary-bg-hover:var(--color-cyan-deep);
+  --action-primary-fg:      var(--color-white);
+  --action-ghost-fg:        var(--color-white);
+  --action-ghost-underline: var(--color-cyan);
+
+  /* Feedback */
+  --feedback-urgent:        var(--color-race-red);
+  --feedback-success:       var(--color-cyan);
+}
+
+/* Vitalini × Appro Mountain — Typography tokens
+ * Inter for everything UI; JetBrains Mono for technical labels.
+ * Tracking is wide on caps headings — a Vitalini signature.
+ */
+
+:root {
+  /* ── Families ────────────────────────────────────────────────────── */
+  --font-sans:    "Inter", "Inter Display", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", "Inter Display", "Archivo Black", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  /* ── Weights ─────────────────────────────────────────────────────── */
+  --fw-regular:  400; /* @kind other */
+  --fw-medium:   500; /* @kind other */
+  --fw-semibold: 600; /* @kind other */
+  --fw-bold:     700; /* @kind other */
+  --fw-black:    800; /* @kind other */
+
+  /* ── Size scale (mobile-first; clamp where it scales to desktop) ── */
+  --fs-12:  0.75rem;     /* 12px — legal, microcopy           */
+  --fs-13:  0.8125rem;   /* 13px — trust strip / mono labels  */
+  --fs-14:  0.875rem;    /* 14px — small UI                   */
+  --fs-15:  0.9375rem;   /* 15px — input / dense              */
+  --fs-16:  1rem;        /* 16px — body min                   */
+  --fs-18:  1.125rem;    /* 18px — body desktop               */
+  --fs-20:  1.25rem;     /* 20px — subhead                    */
+  --fs-22:  1.375rem;    /* 22px — subhead lg                 */
+  --fs-28:  1.75rem;     /* 28px — section title sm           */
+  --fs-40:  2.5rem;      /* 40px — section title              */
+  --fs-56:  3.5rem;      /* 56px — hero mobile                */
+  --fs-80:  5rem;        /* 80px — hero tablet                */
+  --fs-120: 7.5rem;      /* 120px — hero desktop max          */
+
+  --fs-hero:    clamp(3rem,  6vw + 1rem, 7.5rem); /* @kind other */ /* responsive hero size */
+  --fs-section: clamp(2rem,  3vw + 1rem, 3.5rem); /* @kind other */ /* responsive section size */
+
+  /* ── Line height ─────────────────────────────────────────────────── */
+  --lh-tight:    1.04;   /* @kind other */ /* display caps */
+  --lh-snug:     1.15;   /* @kind other */ /* section titles */
+  --lh-normal:   1.45;   /* @kind other */ /* short copy */
+  --lh-relaxed:  1.6;    /* @kind other */ /* body */
+
+  /* ── Tracking ────────────────────────────────────────────────────── */
+  --ls-tight:   -0.02em;  /* @kind other */ /* large display */
+  --ls-display: -0.01em;  /* @kind other */
+  --ls-normal:   0em;     /* @kind other */
+  --ls-wide:     0.05em;  /* @kind other */ /* +50 section titles */
+  --ls-wider:    0.1em;   /* @kind other */ /* +100 eyebrow caps */
+  --ls-mono:     0.04em;  /* @kind other */ /* tech labels */
+
+  /* ── Semantic text roles ─────────────────────────────────────────── */
+  --type-hero-family:   var(--font-display);  /* @kind font */
+  --type-hero-weight:   var(--fw-black);      /* @kind other */
+  --type-hero-size:     var(--fs-hero);       /* @kind other */
+  --type-hero-lh:       var(--lh-tight);      /* @kind other */
+  --type-hero-ls:       var(--ls-tight);      /* @kind other */
+
+  --type-section-family:var(--font-display);  /* @kind font */
+  --type-section-weight:var(--fw-bold);       /* @kind other */
+  --type-section-size:  var(--fs-section);    /* @kind other */
+  --type-section-lh:    var(--lh-snug);       /* @kind other */
+  --type-section-ls:    var(--ls-wide);       /* @kind other */
+
+  --type-eyebrow-family:var(--font-mono);     /* @kind font */
+  --type-eyebrow-weight:var(--fw-medium);     /* @kind other */
+  --type-eyebrow-size:  var(--fs-13);         /* @kind other */
+  --type-eyebrow-ls:    var(--ls-wider);      /* @kind other */
+
+  --type-body-family:   var(--font-sans);     /* @kind font */
+  --type-body-weight:   var(--fw-regular);    /* @kind other */
+  --type-body-size:     var(--fs-18);         /* @kind other */
+  --type-body-lh:       var(--lh-relaxed);    /* @kind other */
+
+  --type-tech-family:   var(--font-mono);     /* @kind font */
+  --type-tech-weight:   var(--fw-medium);     /* @kind other */
+  --type-tech-size:     var(--fs-13);         /* @kind other */
+  --type-tech-ls:       var(--ls-mono);       /* @kind other */
+}
+
+/* Vitalini × Appro Mountain — Spacing, radii, borders, shadows, motion */
+
+:root {
+  /* ── Space scale (4px base) ──────────────────────────────────────── */
+  --space-0:   0;
+  --space-1:   0.25rem;   /* 4   */
+  --space-2:   0.5rem;    /* 8   */
+  --space-3:   0.75rem;   /* 12  */
+  --space-4:   1rem;      /* 16  */
+  --space-5:   1.25rem;   /* 20  */
+  --space-6:   1.5rem;    /* 24  */
+  --space-8:   2rem;      /* 32  */
+  --space-10:  2.5rem;    /* 40  */
+  --space-12:  3rem;      /* 48  */
+  --space-16:  4rem;      /* 64  */
+  --space-20:  5rem;      /* 80  */
+  --space-24:  6rem;      /* 96  */
+  --space-32:  8rem;      /* 128 */
+
+  /* Section rhythm */
+  --section-py:        clamp(4rem, 8vw, 8rem);    /* @kind spacing */ /* vertical padding */
+  --section-gutter:    clamp(1.25rem, 4vw, 3rem); /* @kind spacing */ /* horizontal gutter */
+  --container-max:     80rem;  /* 1280px — brief §10                  */
+
+  /* ── Radii — brand prefers 90° corners. Keep small.  ─────────────── */
+  --radius-0:  0;        /* default — sharp corners                    */
+  --radius-1:  2px;      /* tiny softening only when needed            */
+  --radius-2:  4px;      /* inputs / chips                             */
+  --radius-pill: 999px;  /* avatar / circular play button              */
+
+  /* ── Borders ─────────────────────────────────────────────────────── */
+  --border-w-hair: 1px;   /* @kind spacing */
+  --border-w-thick: 2px;  /* @kind spacing */
+
+  /* ── Shadows — restrained; mostly cyan glow + dark depth ─────────── */
+  --shadow-card:        0 1px 2px rgba(10,10,10,0.06), 0 8px 24px rgba(10,10,10,0.06);
+  --shadow-card-dark:   0 1px 2px rgba(0,0,0,0.6), 0 24px 48px rgba(0,0,0,0.4);
+  --shadow-cyan-soft:   0 0 0 1px rgba(44,181,204,0.4), 0 8px 32px rgba(44,181,204,0.15);
+  --shadow-cyan-glow:   0 0 32px rgba(44,181,204,0.35);
+  --shadow-focus-ring:  0 0 0 3px rgba(44,181,204,0.4);
+
+  /* ── Motion ──────────────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);      /* @kind other */
+  --dur-fast:    150ms;     /* @kind other */
+  --dur-base:    300ms;     /* @kind other */ /* brief §3.3 — 300ms ease-out */
+  --dur-slow:    600ms;     /* @kind other */
+
+  /* ── Z-index ─────────────────────────────────────────────────────── */
+  --z-sticky: 10;   /* @kind other */
+  --z-overlay: 50;  /* @kind other */
+  --z-modal: 100;   /* @kind other */
+}
+
+/* Vitalini × Appro Mountain — Base element styles
+ * Minimal reset + brand defaults applied to bare HTML so a card or screen
+ * pulls in the right type and color even before component styles run.
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-18);
+  line-height: var(--lh-relaxed);
+  color: var(--text-primary);
+  background: var(--surface-page);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--color-cyan-deep); }
+
+button { font-family: inherit; }
+
+img, svg, video { display: block; max-width: 100%; }
+
+::selection {
+  background: var(--color-cyan);
+  color: var(--color-white);
+}
+
+/* Focus ring — accessible, cyan brand glow */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-ring);
+  border-radius: var(--radius-1);
+}
+
+</style>
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("assets/font-14.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("assets/font-15.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("assets/font-16.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="assets/script-0.js"></script>
+<style>
+  :root {
+    --bg: #060607;
+    --panel: #0B0C0E;
+    --cy: #2CB5CC;
+    --cy-dim: rgba(44,181,204,0.35);
+    --wh: #F4F6F7;
+    --mut: rgba(244,246,247,0.52);
+    --faint: rgba(244,246,247,0.16);
+    --hair: rgba(244,246,247,0.12);
+    --disp: "Archivo", "Inter", sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--wh); font-family: var(--font-sans); overflow-x: hidden; }
+
+  /* ── primitives ── */
+  .mono { font-family: var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; }
+  .disp { font-family: var(--disp); font-variation-settings: "wdth" 122; font-weight: 840; text-transform: uppercase; line-height: 0.92; letter-spacing: -0.005em; }
+  .outline { color: transparent; -webkit-text-stroke: 1.5px rgba(244,246,247,0.85); }
+  .outline-cy { color: transparent; -webkit-text-stroke: 1.5px var(--cy); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; position: relative; }
+  a { color: inherit; }
+
+  /* reveal */
+  @media (prefers-reduced-motion: no-preference) {
+    .rv { opacity: 0; transform: translateY(26px); transition: opacity 0.9s cubic-bezier(0.22,0.61,0.36,1), transform 0.9s cubic-bezier(0.22,0.61,0.36,1); }
+    .rv.in { opacity: 1; transform: none; }
+    .rv-line { transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(0.22,0.61,0.36,1) 0.2s; }
+    .rv-line.in { transform: scaleX(1); }
+  }
+  /* environments that don't paint frames (print, static capture): show everything */
+  .no-anim .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .no-anim .rv-line { transform: none !important; transition: none !important; }
+  .no-anim .marquee .track { animation: none !important; }
+
+  /* ── fixed side rail ── */
+  .rail { position: fixed; left: 0; top: 0; bottom: 0; width: 64px; z-index: 40; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 28px 0; border-right: 1px solid var(--hair); background: rgba(6,6,7,0.7); backdrop-filter: blur(6px); }
+  .rail .vtext { writing-mode: vertical-rl; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--mut); text-transform: uppercase; }
+  .rail .idx { display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .rail .idx a { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: var(--faint); text-decoration: none; transition: color 0.3s; }
+  .rail .idx a.on { color: var(--cy); }
+  .rail .crystal { opacity: 0.9; }
+  @media (max-width: 1100px) { .rail { display: none; } .wrap { padding: 0 28px; } }
+
+  /* ── top bar ── */
+  .top { position: absolute; top: 0; left: 0; right: 0; z-index: 30; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; padding-bottom: 0; }
+  .brand { display: flex; align-items: baseline; gap: 12px; }
+  .brand b { font-family: var(--disp); font-variation-settings: "wdth" 116; font-weight: 800; font-size: 15px; letter-spacing: 0.04em; }
+  .brand span { font-size: 11px; letter-spacing: 0.34em; font-weight: 300; color: var(--mut); text-transform: uppercase; }
+  .top .crumb { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; color: var(--cy); text-transform: uppercase; white-space: nowrap; }
+  @media (max-width: 720px) { .top .crumb { display: none; } }
+
+  /* ── HERO ── */
+  .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: end; padding-top: 110px; }
+  .hero-eyebrow { display: flex; align-items: center; gap: 12px; color: var(--cy); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; white-space: nowrap; }
+  @media (max-width: 900px) { .hero-eyebrow { white-space: normal; } }
+  .hero h1 { margin: 34px 0 0; font-size: clamp(72px, 10.5vw, 152px); }
+  .hero h1 .l2 { display: block; }
+  .hero-sub { margin: 38px 0 0; max-width: 480px; font-size: 16px; line-height: 1.7; color: var(--mut); font-weight: 300; }
+  .hero-sub strong { color: var(--wh); font-weight: 500; }
+  .hero-ctas { margin-top: 44px; display: flex; align-items: center; gap: 36px; flex-wrap: wrap; }
+
+  .btn { display: inline-flex; align-items: center; gap: 14px; padding: 19px 36px; background: var(--cy); color: #fff; border: none; cursor: pointer;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+    transition: box-shadow 0.3s cubic-bezier(0.22,0.61,0.36,1), transform 0.3s cubic-bezier(0.22,0.61,0.36,1), background 0.3s; }
+  .btn:hover { box-shadow: 0 8px 32px rgba(44,181,204,0.38), 0 0 0 1px var(--cy); transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .link-q { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--wh); text-decoration: none; border-bottom: 1px solid var(--cy); padding-bottom: 5px; transition: color 0.3s; white-space: nowrap; }
+  .link-q:hover { color: var(--cy); }
+
+  .hero-photo { position: relative; }
+  .hero-photo image-slot { width: 100%; height: 560px; display: block; }
+  .hero-photo .tag { position: absolute; left: -1px; top: 26px; background: var(--bg); border: 1px solid var(--hair); padding: 8px 14px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; color: var(--mut); }
+  .hero-photo .coords { position: absolute; right: 0; bottom: -34px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; color: var(--faint); }
+
+  /* marquee */
+  .marquee { position: absolute; left: 0; right: 0; bottom: 0; border-top: 1px solid var(--hair); padding: 18px 0; overflow: hidden; white-space: nowrap; background: rgba(6,6,7,0.8); }
+  .marquee .track { display: inline-flex; gap: 48px; padding-right: 48px; }
+  @media (prefers-reduced-motion: no-preference) { .marquee .track { animation: mq 46s linear infinite; } }
+  @keyframes mq { to { transform: translateX(-50%); } }
+  .marquee span { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--mut); }
+  .marquee i { color: var(--cy); font-style: normal; }
+
+  /* ── section scaffold ── */
+  section.s { position: relative; padding: 130px 0 120px; }
+  .snum { position: absolute; top: 64px; right: -10px; font-family: var(--disp); font-variation-settings: "wdth" 122; font-weight: 850; font-size: 200px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(244,246,247,0.10); pointer-events: none; user-select: none; }
+  .light .snum { -webkit-text-stroke: 1px rgba(6,6,7,0.08); }
+  .kicker { display: flex; align-items: center; gap: 14px; }
+  .kicker .n { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--cy); }
+  .kicker .rule { width: 64px; height: 1px; background: var(--cy); }
+  .kicker .t { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.24em; color: var(--mut); text-transform: uppercase; white-space: nowrap; }
+  h2.title { margin: 30px 0 0; font-size: clamp(44px, 5.4vw, 76px); }
+  .sub { margin: 26px 0 0; max-width: 560px; font-size: 15px; line-height: 1.75; color: var(--mut); font-weight: 300; }
+
+  /* ── VIDEO ── */
+  .cinema { margin-top: 64px; position: relative; }
+  .cinema .frame { position: relative; aspect-ratio: 16/9; border: 1px solid var(--cy-dim); background: var(--panel); cursor: pointer; overflow: hidden; }
+  .cinema .frame:hover .play { transform: scale(1.08); box-shadow: 0 0 48px rgba(44,181,204,0.45); }
+  .cinema image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .cinema .veil { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(6,6,7,0.1), rgba(6,6,7,0.55)); pointer-events: none; }
+  .play { position: absolute; left: 50%; top: 50%; margin: -44px 0 0 -44px; width: 88px; height: 88px; border-radius: 50%; background: var(--cy); display: flex; align-items: center; justify-content: center; transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.3s; }
+  .play::after { content: ""; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 17px solid #fff; margin-left: 6px; }
+  .cinema .meta { display: flex; justify-content: space-between; margin-top: 14px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; color: var(--faint); text-transform: uppercase; }
+  .cinema iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* ── PRENDAS (white museum) ── */
+  .light { background: #FBFCFC; color: #0A0A0A; }
+  .light .kicker .t { color: rgba(10,10,10,0.45); }
+  .light .sub { color: rgba(10,10,10,0.55); }
+  .fog-down { height: 140px; background: linear-gradient(var(--bg), #FBFCFC); }
+  .fog-up { height: 140px; background: linear-gradient(#FBFCFC, var(--bg)); }
+
+  .pgrid { margin-top: 72px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 26px; }
+  .pitem { position: relative; text-decoration: none; color: inherit; display: block; }
+  .pitem image-slot { width: 100%; display: block; }
+  .pitem .ph { position: relative; overflow: hidden; background: #0D1115; }
+  .pitem .idx { position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: rgba(244,246,247,0.65); z-index: 2; }
+  .pitem .cap { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 16px; border-bottom: 1px solid rgba(10,10,10,0.12); padding-bottom: 14px; position: relative; }
+  .pitem .cap::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 0; background: var(--cy); transition: width 0.45s cubic-bezier(0.22,0.61,0.36,1); }
+  .pitem:hover .cap::after { width: 100%; }
+  .pitem .nm { font-family: var(--disp); font-variation-settings: "wdth" 116; font-weight: 750; font-size: 19px; text-transform: uppercase; letter-spacing: 0.01em; }
+  .pitem .tech { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; color: rgba(10,10,10,0.45); text-transform: uppercase; white-space: nowrap; }
+  .pitem .arrow { color: var(--cy); font-size: 18px; transition: transform 0.3s; }
+  .pitem:hover .arrow { transform: translateX(6px); }
+  .span6 { grid-column: span 6; } .span4 { grid-column: span 4; } .span8 { grid-column: span 8; }
+  .h-tall { height: 460px; } .h-mid { height: 330px; }
+
+  /* promo band */
+  .promo { margin-top: 96px; background: #060607; color: var(--wh); padding: 56px 0 50px; position: relative; overflow: hidden; }
+  .promo .wrap { display: grid; grid-template-columns: 1fr auto auto; gap: clamp(28px, 4vw, 56px); align-items: center; }
+  .promo .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mut); max-width: 230px; line-height: 2; }
+  .promo .lbl b { background: #D32F2F; color: #fff; padding: 3px 8px; font-weight: 600; }
+  .promo .big { font-family: var(--disp); font-variation-settings: "wdth" 122; font-weight: 850; font-size: clamp(48px, 7.2vw, 110px); line-height: 0.9; white-space: nowrap; }
+  .promo .big .pct { color: var(--cy); }
+  .promo .big.b2 .pct { color: transparent; -webkit-text-stroke: 1.5px var(--cy); }
+  .promo .when { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; color: var(--faint); text-transform: uppercase; }
+
+  /* ── CONTACTO ── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 96px; align-items: start; }
+  .c-left { position: sticky; top: 90px; }
+  .c-left h2 { font-size: clamp(54px, 6.5vw, 92px); }
+  .gerard { margin-top: 46px; border-top: 1px solid var(--hair); padding-top: 30px; display: flex; gap: 20px; align-items: center; }
+  .gerard image-slot { width: 76px; height: 76px; flex: none; }
+  .gerard .nm { font-weight: 600; font-size: 16px; }
+  .gerard .rl { margin-top: 3px; font-size: 12px; color: var(--mut); font-weight: 300; }
+  .gerard .ws { margin-top: 8px; display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--cy); text-decoration: none; text-transform: uppercase; }
+  .gdata { margin-top: 26px; display: flex; flex-direction: column; gap: 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--mut); text-transform: uppercase; }
+  .gdata i { color: var(--cy); font-style: normal; margin-right: 10px; }
+
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .field { position: relative; padding-top: 26px; margin-bottom: 26px; }
+  .field label { position: absolute; top: 0; left: 0; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mut); transition: color 0.3s; }
+  .field input, .field select, .field textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--faint); padding: 12px 0; color: var(--wh); font-family: var(--font-sans); font-size: 15px; font-weight: 300; outline: none; transition: border-color 0.3s; border-radius: 0; }
+  .field select { appearance: none; cursor: pointer; }
+  .field select option { background: #101214; }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--cy); }
+  .field:focus-within label { color: var(--cy); }
+  .field.err input, .field.err select { border-color: #D32F2F; }
+  .field .msg { position: absolute; right: 0; top: 2px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; color: #D32F2F; }
+  .rgpd { display: flex; gap: 12px; align-items: flex-start; margin: 8px 0 0; cursor: pointer; }
+  .rgpd input { appearance: none; width: 16px; height: 16px; border: 1px solid var(--faint); background: transparent; margin: 2px 0 0; cursor: pointer; flex: none; transition: all 0.3s; border-radius: 0; }
+  .rgpd input:checked { background: var(--cy); border-color: var(--cy); box-shadow: inset 0 0 0 3px var(--bg); }
+  .rgpd span { font-size: 12px; line-height: 1.7; color: var(--mut); font-weight: 300; }
+  .rgpd a { color: var(--cy); text-decoration: none; }
+  .legal { margin-top: 18px; font-size: 10.5px; line-height: 1.8; color: var(--faint); font-weight: 300; max-width: 480px; }
+  .form-foot { margin-top: 34px; }
+  .success { display: none; border: 1px solid var(--cy-dim); padding: 72px 48px; text-align: center; }
+  .success .ck { width: 60px; height: 60px; margin: 0 auto; border-radius: 50%; background: var(--cy); display: flex; align-items: center; justify-content: center; }
+  .success h3 { margin: 26px 0 0; font-family: var(--disp); font-variation-settings: "wdth" 120; font-weight: 800; font-size: 38px; text-transform: uppercase; }
+  .success p { margin: 16px auto 0; max-width: 380px; font-size: 14px; line-height: 1.8; color: var(--mut); font-weight: 300; }
+
+  /* footer */
+  footer { border-top: 1px solid var(--hair); padding: 44px 0 40px; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  footer .cols { display: flex; gap: 28px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; }
+  footer .cols a { color: var(--mut); text-decoration: none; transition: color 0.3s; }
+  footer .cols a:hover { color: var(--cy); }
+  footer .legalline { width: 100%; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--hair); font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--faint); text-transform: uppercase; }
+
+  @media (max-width: 1320px) {
+    .promo .wrap { grid-template-columns: 1fr; gap: 30px; }
+    .promo .lbl { max-width: none; }
+  }
+  @media (max-width: 900px) {
+    .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+    .c-left { position: static; }
+    form .row { grid-template-columns: 1fr; }
+    .span6, .span4, .span8 { grid-column: span 12; }
+    .snum { font-size: 120px; }
+  }
+</style>
+</head>
+<body>
+
+
+
+<!-- side rail -->
+<aside class="rail" aria-hidden="true">
+  <svg class="crystal" width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M6 0.5V11.5 M1.24 3.25L10.76 8.75 M1.24 8.75L10.76 3.25" stroke="#2CB5CC" stroke-width="1"></path></svg>
+  <div class="idx">
+    <a href="#hero" data-rail="hero">01</a>
+    <a href="#historia" data-rail="historia">02</a>
+    <a href="#coleccion" data-rail="coleccion">03</a>
+    <a href="#contacto" data-rail="contacto">04</a>
+  </div>
+  <span class="vtext">Vitalini × Appro Mountain — 26/27</span>
+</aside>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><b>APPRO</b><span>Mountain</span></div>
+    <span class="crumb">Distribuidor oficial Vitalini · ES / AD / AR</span>
+  </div>
+</header>
+
+<!-- ════ 01 · HERO ════ -->
+<section class="hero" id="hero" data-screen-label="01 Hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow rv">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M6 0.5V11.5 M1.24 3.25L10.76 8.75 M1.24 8.75L10.76 3.25" stroke="#2CB5CC" stroke-width="1"></path></svg>
+          <span>Vitalini Performance Ski Wear · Made in Italy</span>
+        </div>
+        <h1 class="disp rv" style="transition-delay:0.08s">
+          <span class="l2">Vita</span>
+          <span class="l2 outline">Lini</span>
+        </h1>
+        <p class="hero-sub rv" style="transition-delay:0.16s">
+          <strong>Diseñado con pasión. Fabricado para ganar.</strong><br>
+          Equipamiento técnico 100% personalizado para clubs, escuelas y federaciones de esquí.
+          Distribución oficial en España, Andorra y Argentina. Temporada 2026–2027.
+        </p>
+        <div class="hero-ctas rv" style="transition-delay:0.24s">
+          <a class="btn" href="#contacto">Solicita tu propuesta <span aria-hidden="true">→</span></a>
+          <a class="link-q" href="#coleccion">Ver el catálogo 26–27</a>
+        </div>
+      </div>
+      <div class="hero-photo rv" style="transition-delay:0.2s">
+        <image-slot id="hero-photo" placeholder="Foto oficial Vitalini — race suit / acción en pista" shape="rect"></image-slot>
+        <span class="tag">DERMIZAX® 20K/20K · FIS</span>
+        <span class="coords">42°33′N — 1°35′E · PIRINEOS · ALT. 2.882 M</span>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="mq-track">
+      <span>DERMIZAX® 20K / 20K</span><i>❖</i><span>PRIMALOFT® INSULATION</span><i>❖</i><span>CORDURA® REINFORCED</span><i>❖</i><span>OEKO-TEX® STANDARD 100</span><i>❖</i><span>FIS HOMOLOGATED</span><i>❖</i><span>+20 AÑOS EN COPA DEL MUNDO</span><i>❖</i><span>100% MADE IN ITALY</span><i>❖</i>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 02 · HISTORIA / VIDEO ════ -->
+<section class="s" id="historia" data-screen-label="02 Vídeo">
+  <span class="snum" aria-hidden="true">02</span>
+  <div class="wrap">
+    <div class="kicker rv"><span class="n">02</span><span class="rule rv-line"></span><span class="t">La historia</span></div>
+    <h2 class="title disp rv" style="transition-delay:0.08s"><span data-count="20">20</span> años vistiendo<br>a los que <span class="outline-cy">ganan.</span></h2>
+    <p class="sub rv" style="transition-delay:0.14s">
+      Pietro Vitalini, ex-atleta del equipo nacional italiano, fundó la marca con una obsesión:
+      que cada prenda esté a la altura del esfuerzo del esquiador. Esta es nuestra historia.
+    </p>
+    <div class="cinema rv" style="transition-delay:0.1s">
+      <div class="frame" id="video-frame" role="button" tabindex="0" aria-label="Reproducir vídeo institucional">
+        <image-slot id="video-thumb" placeholder="Thumbnail oficial del vídeo — atleta en acción" shape="rect"></image-slot>
+        <div class="veil"></div>
+        <div class="play"></div>
+      </div>
+      <div class="meta"><span>VÍDEO INSTITUCIONAL · STORIA VITALINI</span><span>00:00 — 01:30 · SUB ES</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 03 · COLECCIÓN ════ -->
+<div class="fog-down"></div>
+<section class="s light" id="coleccion" data-screen-label="03 Prendas">
+  <span class="snum" aria-hidden="true">03</span>
+  <div class="wrap">
+    <div class="kicker rv"><span class="n">03</span><span class="rule rv-line"></span><span class="t">Colección 2026–2027</span></div>
+    <h2 class="title disp rv" style="transition-delay:0.08s">Cada prenda, con los<br>colores de <span style="color:var(--cy)">tu club.</span></h2>
+    <p class="sub rv" style="transition-delay:0.14s">
+      Sin mínimos de pedido. Hasta <strong style="color:#0A0A0A;font-weight:600"><span data-count="5">5</span> modificaciones</strong> de diseño incluidas.
+      Producción italiana, certificación FIS.
+    </p>
+
+    <div class="pgrid">
+      <a class="pitem span8 rv" href="#contacto" data-cat="jackets">
+        <div class="ph"><span class="idx">01</span><image-slot id="prod-jackets" class="h-tall" style="height:460px" placeholder="Jackets técnicas — foto oficial" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Jackets técnicas</span><span class="tech">DERMIZAX® 20K</span><span class="arrow">→</span></div>
+      </a>
+      <a class="pitem span4 rv" style="transition-delay:0.08s" href="#contacto" data-cat="race-suits">
+        <div class="ph"><span class="idx">02</span><image-slot id="prod-race" class="h-tall" style="height:460px" placeholder="Race suits FIS" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Race Suits</span><span class="tech">FIS · CUT-RES</span><span class="arrow">→</span></div>
+      </a>
+      <a class="pitem span4 rv" href="#contacto" data-cat="pants">
+        <div class="ph"><span class="idx">03</span><image-slot id="prod-pants" style="height:330px" placeholder="Pantalones técnicos" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Pantalones</span><span class="tech">CORDURA®</span><span class="arrow">→</span></div>
+      </a>
+      <a class="pitem span4 rv" style="transition-delay:0.08s" href="#contacto" data-cat="softshell">
+        <div class="ph"><span class="idx">04</span><image-slot id="prod-soft" style="height:330px" placeholder="Softshell &amp; insulators" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Softshell</span><span class="tech">PRIMALOFT® GOLD</span><span class="arrow">→</span></div>
+      </a>
+      <a class="pitem span4 rv" style="transition-delay:0.16s" href="#contacto" data-cat="baselayer">
+        <div class="ph"><span class="idx">05</span><image-slot id="prod-base" style="height:330px" placeholder="Base layers térmicos" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Base Layers</span><span class="tech">OEKO-TEX® 100</span><span class="arrow">→</span></div>
+      </a>
+      <a class="pitem span8 rv" href="#contacto" data-cat="accesorios">
+        <div class="ph"><span class="idx">06</span><image-slot id="prod-acc" style="height:330px" placeholder="Accesorios &amp; casual con branding de club" shape="rect"></image-slot></div>
+        <div class="cap"><span class="nm">Accesorios &amp; Casual</span><span class="tech">CUSTOM BRANDING</span><span class="arrow">→</span></div>
+      </a>
+      <div class="span4 rv" style="transition-delay:0.08s; display:flex; flex-direction:column; justify-content:flex-end; gap:18px; padding-bottom:14px;">
+        <p style="margin:0; font-size:14px; line-height:1.8; color:rgba(10,10,10,0.55); font-weight:300;">
+          Personalización total con sublimación full-color.
+          Diseño gráfico incluido, postventa, reparaciones y logística.
+        </p>
+        <a class="link-q" href="#contacto" style="color:#0A0A0A; align-self:flex-start;">Pide el catálogo completo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="promo rv">
+    <div class="wrap">
+      <div class="lbl"><b>VENTANA DE PEDIDOS</b><br>Reserva tu producción y asegura el descuento de temporada.</div>
+      <div class="big">ABRIL <span class="pct"><span data-count="-14">-14</span>%</span><span class="when">Entrega octubre 2026</span></div>
+      <div class="big b2">JUNIO <span class="pct"><span data-count="-6">-6</span>%</span><span class="when">Entrega noviembre 2026</span></div>
+    </div>
+  </div>
+</section>
+<div class="fog-up"></div>
+
+<!-- ════ 04 · CONTACTO ════ -->
+<section class="s" id="contacto" data-screen-label="04 Contacto">
+  <span class="snum" aria-hidden="true">04</span>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-left">
+        <div class="kicker rv"><span class="n">04</span><span class="rule rv-line"></span><span class="t">Hablemos</span></div>
+        <h2 class="title disp rv" style="transition-delay:0.08s">Cuéntame<br><span class="outline">tu proyecto.</span></h2>
+        <p class="sub rv" style="transition-delay:0.14s">Te respondo en menos de 24h con una propuesta personalizada para tu club, escuela o federación.</p>
+        <div class="gerard rv" style="transition-delay:0.18s">
+          <image-slot id="gerard-photo" shape="circle" placeholder="Foto Gerard"></image-slot>
+          <div>
+            <div class="nm">Gerard Udina</div>
+            <div class="rl">Agente comercial · España / Andorra / Argentina</div>
+            <a class="ws" href="https://wa.me/376000000?text=Hola%20Gerard%2C%20vengo%20de%20la%20web%20Vitalini%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%E2%80%A6" target="_blank" rel="noopener">WhatsApp Business directo ↗</a>
+          </div>
+        </div>
+        <div class="gdata rv" style="transition-delay:0.22s">
+          <span><i>TEL</i> +376 [teléfono]</span>
+          <span><i>MAIL</i> gerard@appromountain.com</span>
+          <span><i>ZONA</i> Pirineos · ES / AD — AR</span>
+        </div>
+      </div>
+
+      <div>
+        <form id="lead-form" novalidate="">
+          <div class="row">
+            <div class="field"><label for="f-nombre">Nombre completo *</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required=""></div>
+            <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" required=""></div>
+            <div class="field"><label for="f-tel">Teléfono *</label><input id="f-tel" name="telefono" type="tel" placeholder="+34 / +376 / +54" required=""></div>
+            <div class="field"><label for="f-org">Organización *</label><input id="f-org" name="organizacion" type="text" required=""></div>
+            <div class="field">
+              <label for="f-tipo">Tipo de organización *</label>
+              <select id="f-tipo" name="tipo" required="">
+                <option value="" disabled="" selected="">Seleccionar…</option>
+                <option>Club</option><option>Escuela</option><option>Federación</option><option>Equipo profesional</option><option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-pais">País *</label>
+              <select id="f-pais" name="pais" required="">
+                <option value="" disabled="" selected="">Seleccionar…</option>
+                <option>España</option><option>Andorra</option><option>Argentina</option><option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-cat">Categoría de interés</label>
+            <select id="f-cat" name="categoria">
+              <option value="" disabled="" selected="">Seleccionar…</option>
+              <option value="jackets">Jackets técnicas</option><option value="pants">Pantalones técnicos</option>
+              <option value="race-suits">Race Suits</option><option value="softshell">Softshell &amp; Insulators</option>
+              <option value="baselayer">Ropa interior técnica</option><option value="accesorios">Accesorios &amp; Casual</option>
+              <option value="todo">Todo el catálogo</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu proyecto…"></textarea></div>
+          <label class="rgpd"><input type="checkbox" id="f-rgpd" required=""><span>Acepto la <a href="#">política de privacidad</a>. Tus datos son tratados por Appro Mountain y compartidos con Vitalini S.r.l. únicamente para responder a tu solicitud. Nunca cedidos a terceros.</span></label>
+          <p class="legal">RGPD (España) · Llei 29/2021 (Andorra) · Ley 25.326 (Argentina)</p>
+          <div class="form-foot"><button class="btn" type="submit" id="submit-btn">Enviar propuesta <span aria-hidden="true">→</span></button></div>
+        </form>
+        <div class="success" id="form-success">
+          <div class="ck"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 12.5L10 17.5L19 7" stroke="white" stroke-width="2.5" stroke-linecap="square"></path></svg></div>
+          <h3>Recibido.</h3>
+          <p>Te respondemos en menos de 24h con tu propuesta personalizada. Mientras tanto, descarga el catálogo 2026–2027.</p>
+          <p style="margin-top:28px;"><a class="link-q" href="#">Descargar catálogo PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><b>APPRO</b><span>Mountain</span></div>
+    <nav class="cols" aria-label="Legal">
+      <a href="#">Política de privacidad</a><a href="#">Aviso legal</a><a href="#">Cookies</a>
+    </nav>
+    <nav class="cols" aria-label="Redes">
+      <a href="#" style="color:var(--cy)">Instagram</a><a href="#" style="color:var(--cy)">LinkedIn</a><a href="#" style="color:var(--cy)">YouTube</a>
+    </nav>
+    <div class="legalline">© 2026 Appro Mountain · Vitalini Performance Ski Wear es marca registrada de Vitalini S.r.l. · Made in Italy</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var frozen = true; // until a rAF proves the iframe paints
+  requestAnimationFrame(function () { frozen = false; });
+  setTimeout(function () { if (frozen) document.documentElement.classList.add("no-anim"); }, 250);
+
+  /* marquee: duplicate track for seamless loop */
+  var track = document.getElementById("mq-track");
+  track.innerHTML += track.innerHTML;
+
+  /* scroll reveals + counters + rail — manual rect checks (robust everywhere) */
+  function animateCount(el) {
+    var to = parseInt(el.getAttribute("data-count"), 10);
+    if (reduced || frozen) { el.textContent = to; return; }
+    var start = null, dur = 1300;
+    function tick(t) {
+      if (!start) start = t;
+      var p = Math.min((t - start) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  var ids = ["hero", "historia", "coleccion", "contacto"];
+  var firstPass = true;
+  function onScroll() {
+    var vh = window.innerHeight;
+    document.querySelectorAll(".rv:not(.in)").forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh * 0.92) {
+        if (firstPass) { el.style.transition = "none"; el.querySelectorAll(".rv-line").forEach(function (l) { l.style.transition = "none"; }); }
+        el.classList.add("in");
+        el.querySelectorAll(".rv-line").forEach(function (l) { l.classList.add("in"); });
+      }
+    });
+    document.querySelectorAll("[data-count]:not([data-done])").forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh * 0.9) {
+        el.setAttribute("data-done", "1");
+        animateCount(el);
+      }
+    });
+    var current = ids[0];
+    ids.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= vh * 0.45) current = id;
+    });
+    document.querySelectorAll("[data-rail]").forEach(function (a) {
+      a.classList.toggle("on", a.getAttribute("data-rail") === current);
+    });
+  }
+  var raf = false;
+  function queue() { if (!raf) { raf = true; requestAnimationFrame(function () { raf = false; onScroll(); }); } }
+  window.addEventListener("scroll", queue, { passive: true });
+  window.addEventListener("resize", queue);
+  window.addEventListener("load", onScroll);
+  onScroll();
+  firstPass = false;
+  setTimeout(onScroll, 150);
+
+  /* video lazy inject — Vimeo URL pending; graceful fallback */
+  var VIDEO_URL = ""; // p.ej. "https://player.vimeo.com/video/XXXXXXX"
+  var frame = document.getElementById("video-frame");
+  function playVideo() {
+    if (VIDEO_URL) {
+      var ifr = document.createElement("iframe");
+      ifr.src = VIDEO_URL + (VIDEO_URL.indexOf("?") > -1 ? "&" : "?") + "autoplay=1&controls=1&rel=0&modestbranding=1";
+      ifr.allow = "autoplay; fullscreen";
+      ifr.title = "Vitalini — vídeo institucional";
+      frame.innerHTML = "";
+      frame.appendChild(ifr);
+      frame.style.cursor = "default";
+    } else {
+      frame.querySelector(".play").style.display = "none";
+      var d = document.createElement("div");
+      d.style.cssText = "position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:rgba(6,6,7,0.82);padding:32px;text-align:center;";
+      d.innerHTML = '<span class="mono" style="font-size:10px;color:rgba(244,246,247,0.5)">Vídeo no disponible · URL pendiente</span>' +
+        '<a class="btn" href="#contacto">Solicita tu propuesta <span aria-hidden="true">→</span></a>';
+      frame.appendChild(d);
+    }
+  }
+  frame.addEventListener("click", playVideo);
+  frame.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); playVideo(); } });
+
+  /* product click → pre-fill category */
+  document.querySelectorAll(".pitem[data-cat]").forEach(function (p) {
+    p.addEventListener("click", function () {
+      var sel = document.getElementById("f-cat");
+      sel.value = p.getAttribute("data-cat");
+    });
+  });
+
+  /* form validation + success */
+  var form = document.getElementById("lead-form");
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var ok = true;
+    form.querySelectorAll(".field").forEach(function (f) {
+      var inp = f.querySelector("input,select,textarea");
+      var msg = f.querySelector(".msg"); if (msg) msg.remove();
+      f.classList.remove("err");
+      if (!inp || !inp.required) return;
+      var bad = !inp.value.trim() || (inp.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value));
+      if (bad) {
+        ok = false; f.classList.add("err");
+        var m = document.createElement("span"); m.className = "msg";
+        m.textContent = inp.type === "email" && inp.value ? "EMAIL NO VÁLIDO" : "OBLIGATORIO";
+        f.appendChild(m);
+      }
+    });
+    var rg = document.getElementById("f-rgpd");
+    if (!rg.checked) { ok = false; rg.style.borderColor = "#D32F2F"; } else { rg.style.borderColor = ""; }
+    if (!ok) return;
+    var btn = document.getElementById("submit-btn");
+    btn.disabled = true; btn.firstChild.textContent = "Enviando… ";
+    setTimeout(function () {
+      form.style.display = "none";
+      document.getElementById("form-success").style.display = "block";
+    }, 900);
+  });
+})();
+</script>
+
+
+</body></html>
