@@ -985,9 +985,13 @@ img, svg, video { display: block; max-width: 100%; }
   .lang-btn { background: none; border: 1px solid transparent; padding: 4px 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; color: var(--faint); text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
   .lang-btn:hover { color: var(--wh); }
   .lang-btn.active { color: var(--cy); border-color: var(--cy); }
+  /* snowfall */
+  #snowfall { position: fixed; inset: 0; z-index: 9999; pointer-events: none; }
 </style>
 </head>
 <body>
+
+<canvas id="snowfall"></canvas>
 
 
 
@@ -1450,6 +1454,128 @@ img, svg, video { display: block; max-width: 100%; }
       document.getElementById("form-success").style.display = "block";
     }, 900);
   });
+})();
+</script>
+
+<script>
+(function () {
+  "use strict";
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var canvas = document.getElementById("snowfall");
+  var ctx = canvas.getContext("2d");
+  var W, H, flakes = [], MAX = 120;
+  var PERSPECTIVE = 800;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  /* Snowflake crystal shape — 6 arms with branches */
+  function drawCrystal(ctx, size, detail) {
+    ctx.beginPath();
+    for (var i = 0; i < 6; i++) {
+      var angle = (Math.PI / 3) * i;
+      /* main arm */
+      ctx.moveTo(0, 0);
+      var ax = Math.cos(angle) * size;
+      var ay = Math.sin(angle) * size;
+      ctx.lineTo(ax, ay);
+      /* branches */
+      if (detail > 0) {
+        for (var b = 1; b <= detail; b++) {
+          var t = b / (detail + 1);
+          var bx = Math.cos(angle) * size * t;
+          var by = Math.sin(angle) * size * t;
+          var blen = size * 0.35 * (1 - t);
+          var a1 = angle + Math.PI / 4;
+          var a2 = angle - Math.PI / 4;
+          ctx.moveTo(bx, by);
+          ctx.lineTo(bx + Math.cos(a1) * blen, by + Math.sin(a1) * blen);
+          ctx.moveTo(bx, by);
+          ctx.lineTo(bx + Math.cos(a2) * blen, by + Math.sin(a2) * blen);
+        }
+      }
+    }
+    ctx.stroke();
+  }
+
+  function createFlake() {
+    var z = Math.random() * 600 + 100; /* depth 100–700 */
+    return {
+      x: Math.random() * W * 1.4 - W * 0.2,
+      y: -Math.random() * H * 0.3,
+      z: z,
+      radius: Math.random() * 3.5 + 1.5,
+      speed: Math.random() * 0.6 + 0.3,
+      drift: (Math.random() - 0.5) * 0.4,
+      spin: Math.random() * Math.PI * 2,
+      spinSpeed: (Math.random() - 0.5) * 0.02,
+      tiltX: Math.random() * Math.PI * 2,
+      tiltSpeed: (Math.random() - 0.5) * 0.008,
+      detail: Math.floor(Math.random() * 3), /* 0, 1, or 2 branch levels */
+      wobblePhase: Math.random() * Math.PI * 2,
+      wobbleAmp: Math.random() * 0.8 + 0.2
+    };
+  }
+
+  for (var i = 0; i < MAX; i++) {
+    var f = createFlake();
+    f.y = Math.random() * H; /* spread initial position */
+    flakes.push(f);
+  }
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+
+    for (var i = 0; i < flakes.length; i++) {
+      var f = flakes[i];
+
+      /* move */
+      f.y += f.speed * (800 / f.z);
+      f.x += f.drift + Math.sin(f.wobblePhase) * f.wobbleAmp;
+      f.wobblePhase += 0.012;
+      f.spin += f.spinSpeed;
+      f.tiltX += f.tiltSpeed;
+
+      /* recycle */
+      if (f.y > H + 20) {
+        flakes[i] = createFlake();
+        continue;
+      }
+
+      /* 3D projection */
+      var scale = PERSPECTIVE / (PERSPECTIVE + f.z);
+      var projX = W / 2 + (f.x - W / 2) * scale;
+      var projY = f.y * scale;
+      var projSize = f.radius * scale * 4;
+      var tilt = Math.cos(f.tiltX); /* simulate 3D tilt: foreshorten one axis */
+
+      /* opacity by depth */
+      var alpha = scale * 0.85;
+      alpha = Math.max(0.08, Math.min(0.75, alpha));
+
+      ctx.save();
+      ctx.translate(projX, projY);
+      ctx.rotate(f.spin);
+      ctx.scale(1, Math.abs(tilt) * 0.6 + 0.4); /* 3D tilt squash */
+
+      ctx.strokeStyle = "rgba(255,255,255," + alpha + ")";
+      ctx.lineWidth = Math.max(0.5, scale * 1.2);
+      ctx.lineCap = "round";
+
+      drawCrystal(ctx, projSize, f.detail);
+
+      ctx.restore();
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
 })();
 </script>
 
